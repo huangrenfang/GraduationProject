@@ -17,7 +17,7 @@
       <div class="card-item__wrapper">
         <div class="card-item__top">
           <img
-            src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png"
+            src="../assets/images/chip.png"
             class="card-item__chip"
           />
           <div class="card-item__type">
@@ -104,7 +104,7 @@
         </div>
         <div class="card-item__type">
           <img
-            :src="'https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/' + cardType + '.png'"
+            :src="'../assets/images/' + cardType + '.png'"
             v-if="cardType"
             class="card-item__typeImg"
           />
@@ -115,6 +115,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Card',
   props: {
@@ -153,7 +154,6 @@ export default {
   },
   mounted () {
     this.changePlaceholder()
-
     let self = this
     let fields = document.querySelectorAll('[data-card-field]')
     fields.forEach(element => {
@@ -209,7 +209,7 @@ export default {
     currentCardBackground () {
       if (this.randomBackgrounds && !this.backgroundImage) { // TODO will be optimized
         let random = Math.floor(Math.random() * 25 + 1)
-        return `https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/${random}.jpeg`
+        return `../assets/images/${random}.jpeg`
       } else if (this.backgroundImage) {
         return this.backgroundImage
       } else {
@@ -244,3 +244,4 @@ export default {
   }
 }
 </script>
+

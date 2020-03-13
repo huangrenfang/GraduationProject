@@ -1,20 +1,31 @@
 <template>
   <div id="app">
     <Nav />
+    <CardForm
+      :form-data="formData"
+      @input-card-number="updateCardNumber"
+      @input-card-name="updateCardName"
+      @input-card-month="updateCardMonth"
+      @input-card-year="updateCardYear"
+      @input-card-cvv="updateCardCvv"
+    />
     <router-view/>
   </div>
 </template>
 
 <script>
-import Nav from './views/Nav'
+import CardForm from './components/CardForm'
+import Nav from './views/Nav';
 export default {
   components:{
-    Nav
+    Nav,
+    CardForm
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../src/assets/style.scss';
 *{
   margin: 0;
 }
@@ -31,7 +42,4 @@ export default {
   flex-direction: column;
 }
 
-#nav {
-  padding: 30px;
-}
 </style>

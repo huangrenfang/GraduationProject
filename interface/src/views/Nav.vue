@@ -2,14 +2,14 @@
   <div id="main">
     <el-menu
     :default-active="activeIndex2"
-    router=true
+    router
     class="el-menu-demo"
     mode="horizontal"
-    @select="handleSelect"
+    
     background-color="#545c64"
     text-color="#fff"
     active-text-color="#ffd04b">
-        <el-menu-item class="el-menu-demo-disp" index="/card">展示大厅</el-menu-item>
+        <el-menu-item class="el-menu-demo-disp" index="/cardform">展示大厅</el-menu-item>
         <el-submenu index="2" class="el-menu-demo-skin el-menu-demo-disp">
             <template slot="title" >皮肤制作</template>
             <el-menu-item index="2-1">选项1</el-menu-item>
@@ -24,7 +24,8 @@
 export default {
     data(){
         return{
-            activeIndex2:"/card"
+            activeIndex2:"/cardform",
+            // bool: "true"
         }
     }
     // methods: {
