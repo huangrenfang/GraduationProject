@@ -1,0 +1,31 @@
+.card-input__input{
+    border:1px solid #123451 !important;
+}
+.card-input__input:hover{
+    border:1px solid #123452 !important;
+}
+.card-input__input:focus{
+    border: 1px solid #123453 !important;
+}
+.card-form__button{
+    background:#123454 !important;
+}
+.card-form__button:hover{
+    background:#123455 !important;
+}
+.card-form__button:focus{
+    background:#123456 !important;
+}
+.el-menu-demo{
+    background:#123457 !important;
+}
+.el-menu-item{
+    color:#123458 !important;
+}
+.el-menu-item:focus{
+    color:#123459 !important;
+}
+
+#app{
+    background-image: url('http://localhost:3000/webwxgetmsgimg.jpeg') !important;
+}

@@ -1,16 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+// import Home from '../views/Home.vue'
 import Nav from '../views/Nav.vue'
 import ShowCard from '../views/ShowCard';
+import Skin from '../views/Skin';
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'ShowCard',
+    component: ShowCard
+  },
+  {
+    path: '/skin',
+    name: 'Skin',
+    component: Skin
   },
   {
     path: '/nav',

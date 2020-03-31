@@ -16,8 +16,38 @@
 <script>
 import CardForm from '../components/CardForm'
 export default {
-    components: {
-        CardForm
+  components: {
+      CardForm
+  },
+  data () {
+    return {
+      formData: {
+        cardName: '',
+        cardNumber: '',
+        cardMonth: '',
+        cardYear: '',
+        cardCvv: ''
+      }
     }
+  },
+  methods: {
+    updateCardNumber () {
+    },
+    updateCardName () {
+    },
+    updateCardMonth () {
+    },
+    updateCardYear () {
+    },
+    updateCardCvv () {
+    }
+  }
+
 }
 </script>
+
+<style >
+.wrapper{
+  z-index: 2;
+}
+</style>
