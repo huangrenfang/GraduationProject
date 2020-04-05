@@ -1,31 +1,31 @@
 .card-input__input{
-    border:1px solid #123451 !important;
+    border:1px solid input_default !important;
 }
 .card-input__input:hover{
-    border:1px solid #123452 !important;
+    border:1px solid input_hover !important;
 }
 .card-input__input:focus{
-    border: 1px solid #123453 !important;
+    border: 1px solid input_active !important;
 }
 .card-form__button{
-    background:#123454 !important;
+    background:button_default !important;
 }
 .card-form__button:hover{
-    background:#123455 !important;
+    background:button_hover !important;
 }
 .card-form__button:focus{
-    background:#123456 !important;
+    background:button_active !important;
 }
 .el-menu-demo{
-    background:#123457 !important;
+    background:nav_background_color !important;
 }
 .el-menu-item{
-    color:#123458 !important;
+    color:nav_text_color !important;
 }
 .el-menu-item:focus{
-    color:#123459 !important;
+    color:nav_text_active_color !important;
 }
 
 #app{
-    background-image: url('http://localhost:3000/webwxgetmsgimg.jpeg') !important;
+    background-image: url('http://localhost:3000/imgName') !important;
 }

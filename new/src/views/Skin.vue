@@ -145,7 +145,7 @@ export default {
             
             axios({
                 method:"get",
-                url: "http://localhost:3000/skin.css"
+                url: "http://localhost:3000/newSkin.css"
             }).then((res)=>{
                 let skin1 = document.createElement('style');
                 let mainApp = window.document.getElementById("app");

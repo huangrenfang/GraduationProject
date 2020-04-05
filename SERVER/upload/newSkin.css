@@ -1,0 +1,31 @@
+.card-input__input{
+    border:1px solid #123456 !important;
+}
+.card-input__input:hover{
+    border:1px solid #123456 !important;
+}
+.card-input__input:focus{
+    border: 1px solid #123456 !important;
+}
+.card-form__button{
+    background:#123456 !important;
+}
+.card-form__button:hover{
+    background:#123456 !important;
+}
+.card-form__button:focus{
+    background:#123456 !important;
+}
+.el-menu-demo{
+    background:#123456 !important;
+}
+.el-menu-item{
+    color:#123456 !important;
+}
+.el-menu-item:focus{
+    color:#123456 !important;
+}
+
+#app{
+    background-image: url('http://localhost:3000/timg.jpeg') !important;
+}

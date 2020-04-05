@@ -66,11 +66,16 @@ router.post('/final',async (req,res)=>{
             for(let item of styleList){
                 for(let host in item){
                     let reg = new RegExp(host,"g")
-                    console.log(host,"host")
+                    // console.log(host,"host")
+                    // console.log(item[host],"item[host]")
                     list = list.replace(reg,item[host])
+                    // console.log(list,'list')
+
                 }
+                // console.log(list,"list")
             }
-            fs.writeFile('upload/skin.css',list,{encoding:"utf-8"},(err)=>{
+
+            fs.writeFile('upload/newSkin.css',list,{encoding:"utf-8"},(err)=>{
                 if(err){
                     console.log("writeFile failed")
                 }else{
