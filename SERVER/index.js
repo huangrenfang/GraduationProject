@@ -28,8 +28,8 @@ app.use(router.allowedMethods());
 
 
 
-const {connect} = require('./init.js');
-connect();
+// const {connect} = require('./init.js');
+// connect();
 
 
 app.use(async (ctx)=>{

@@ -17,13 +17,13 @@
       <div class="card-item__wrapper">
         <div class="card-item__top">
           <img
-            src="https://github.com/huangrenfang/GraduationProject/tree/master/interface/src/assets/images"
+            src="http://localhost:3000/chip.png"
             class="card-item__chip"
           />
           <div class="card-item__type">
             <transition name="slide-fade-up">
               <img
-                :src="'https://github.com/huangrenfang/GraduationProject/tree/master/interface/src/assets/images/' + cardType + '.png'"
+                :src="'http://localhost:3000/' + cardType + '.png'"
                 v-if="cardType"
                 :key="cardType"
                 alt
@@ -104,7 +104,7 @@
         </div>
         <div class="card-item__type">
           <img
-            :src="'https://github.com/huangrenfang/GraduationProject/tree/master/interface/src/assets/images/' + cardType + '.png'"
+            :src="`http://localhost:3000/${random}.jpeg`"
             v-if="cardType"
             class="card-item__typeImg"
           />
@@ -209,7 +209,7 @@ export default {
     currentCardBackground () {
       if (this.randomBackgrounds && !this.backgroundImage) { // TODO will be optimized
         let random = Math.floor(Math.random() * 25 + 1)
-        return `@/assets/images/${random}.jpeg`
+        return `http://localhost:3000/${random}.jpeg`
       } else if (this.backgroundImage) {
         return this.backgroundImage
       } else {
