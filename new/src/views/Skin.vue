@@ -130,23 +130,24 @@ export default {
     },
     methods: {
         finish(){
-            console.log("finsh")
-            axios({
-                method: 'post',
-                url: 'http://localhost:3000/main/final',
-                data:{
-                    styleList: this.styleList,
-                    msg: "this is final test"
-                }
-            }).then((res)=>{
-                console.log(res)
-            })
+            // console.log("finsh")
+            // axios({
+            //     method: 'post',
+            //     url: 'http://localhost:3000/main/final',
+            //     data:{
+            //         styleList: this.styleList,
+            //         msg: "this is final test"
+            //     }
+            // }).then((res)=>{
+            //     console.log(res)
+            // })
             
             
             axios({
                 method:"get",
                 url: "http://localhost:3000/newSkin.css"
             }).then((res)=>{
+                console.log(res)
                 let skin1 = document.createElement('style');
                 let mainApp = window.document.getElementById("app");
                 console.log(res.data)
@@ -189,20 +190,20 @@ export default {
             }
 
             //正则表达式检测输入规范问题
-            let reg = /^#[0-9a-z]{6}/;
+            // let reg = /^#[0-9a-z]{6}/;
             
-            if(typeof  this.styleList[8] !== "object"){
-                this.$message.error("请填写完整")
-                return
-            }
-            for(let item of this.styleList){
-                for(let host in item){
-                    if(!reg.test(item[host])){
-                        this.$message.error(`${host}填写不规范`)
-                        return
-                    }
-                }
-            }
+            // if(typeof  this.styleList[8] !== "object"){
+            //     this.$message.error("请填写完整")
+            //     return
+            // }
+            // for(let item of this.styleList){
+            //     for(let host in item){
+            //         if(!reg.test(item[host])){
+            //             this.$message.error(`${host}填写不规范`)
+            //             return
+            //         }
+            //     }
+            // }
             ++this.active
         },
         imgNext(){

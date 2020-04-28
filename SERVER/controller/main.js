@@ -2,7 +2,6 @@ const Router = require('koa-router');
 const router = new Router();
 const multer = require('koa-multer');
 let fs = require('fs')
-let path = require('path')
 
 
 
@@ -14,7 +13,7 @@ let storage = multer.diskStorage({
         cb(null, 'upload/');    
     },
     filename: function (req, file, cb) {
-        // 将保存文件名设置为 时间戳 + 文件原始名，比如 151342376785-123.jpg
+        // 将保存文件名设置为文件原始名
         cb(null, file.originalname);  
     }
 });
@@ -39,40 +38,24 @@ let upload = multer({ storage: storage });
 
 /* POST upload listing. */
 router.post('/upload', upload.single('file'), async (res)=> {
-    // req.response.status = 200;
-    // req.response.message = "upload is worked"
     res.body = "upload successed"
 });
 
-// router.post('/',async (ctx)=>{
-//     console.log("koa-router 成功")
-//     ctx.body = {
-//         code:200,
-//         msg:"It's work!"
-//     }
-// })
 
 router.post('/final',async (req,res)=>{
     let styleList = req.request.body.styleList
     let list = "";
-
     fs.readFile('upload/skin.css',{encoding:"utf-8"},(err,data)=>{
         if(err){
             console.log(err)
         }else{
-            list = data;
-            
+            list = data;       
             //循环上传的样式，每次匹配到对应到key值后，全局替换对应css样式值
             for(let item of styleList){
                 for(let host in item){
                     let reg = new RegExp(host,"g")
-                    // console.log(host,"host")
-                    // console.log(item[host],"item[host]")
                     list = list.replace(reg,item[host])
-                    // console.log(list,'list')
-
                 }
-                // console.log(list,"list")
             }
 
             fs.writeFile('upload/newSkin.css',list,{encoding:"utf-8"},(err)=>{
